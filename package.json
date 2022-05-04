@@ -1,5 +1,27 @@
 {
-  "dependencies": {
-    "eslint": "^8.14.0"
+  "name": "lesson1.node",
+  "version": "1.0.0",
+  "description": "nodejs",
+  "main": "helper.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrIsmoiljon/NodeJS.git"
+  },
+  "keywords": [
+    "nodejs",
+    "lesson"
+  ],
+  "author": "Ismoiljon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MrIsmoiljon/NodeJS/issues"
+  },
+  "homepage": "https://github.com/MrIsmoiljon/NodeJS#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.16"
   }
 }
