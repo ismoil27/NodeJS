@@ -1,0 +1,23 @@
+{
+  "name": "lesson1.node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrIsmoiljon/NodeJS.git"
+  },
+  "author": "Ismoiljon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MrIsmoiljon/NodeJS/issues"
+  },
+  "homepage": "https://github.com/MrIsmoiljon/NodeJS#readme",
+  "dependencies": {
+    "nodemon": "^2.0.16"
+  }
+}

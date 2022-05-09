@@ -15,7 +15,7 @@
 // const newArray = Object.values(obj);
 // console.log(newArray);
 
-//TODO: this is a challange removing duplicates of object.
+//TODO: this is a challange removing duplicates of array.
 // const arr = [1, 2, 3, 2, 3, 4, 5, 6, 1];
 
 // let updatedArray = [...new Set(arr)];
