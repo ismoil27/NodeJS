@@ -1,7 +1,15 @@
-const http = require("http");
+const express = require("express");
 
-const routes = require("./routes");
+const app = express();
 
-const server = http.createServer(routes.handler);
+app.use("/", (req, res, next) => {
+  console.log("This runs always!");
+  next();
+});
 
-server.listen(3000);
+app.use("/add-product", (req, res, next) => {
+  console.log("In another middle");
+  res.send("<h1>This is 'Add Product page'</h1>");
+});
+
+app.listen(3000);
