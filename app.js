@@ -1,15 +1,21 @@
+const path = require("path");
+
 const express = require("express");
 
 const app = express();
 
-app.use("/", (req, res, next) => {
-  console.log("This runs always!");
-  next();
-});
+const adminRoutes = require("./routes/admin");
+const shopRoutes = require("./routes/shop");
 
-app.use("/add-product", (req, res, next) => {
-  console.log("In another middle");
-  res.send("<h1>This is 'Add Product page'</h1>");
+app.get("/favicon.ico", (req, res) => res.status(204));
+
+app.use(express.urlencoded({ extended: true }));
+
+app.use(shopRoutes);
+app.use(adminRoutes);
+
+app.use((req, res, next) => {
+  res.status(404).sendFile(path.join(__dirname, "views", "404.html"));
 });
 
 app.listen(3000);
