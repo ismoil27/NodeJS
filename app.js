@@ -10,6 +10,7 @@ const shopRoutes = require("./routes/shop");
 app.get("/favicon.ico", (req, res) => res.status(204));
 
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, "public")));
 
 app.use(shopRoutes);
 app.use(adminRoutes);
