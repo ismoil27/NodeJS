@@ -84,8 +84,8 @@ button {
   font-weight: 550;
 }
 
-button:hover,
-button:active {
+.btn:hover,
+.btn:active {
   background-color: #12cdd4;
   color: #fff;
 }
