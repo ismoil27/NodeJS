@@ -3,6 +3,7 @@ const path = require("path");
 const express = require("express");
 
 const errorController = require("./controllers/error");
+const db = require("./utils/database");
 
 const app = express();
 
@@ -11,6 +12,14 @@ app.set("views", "views");
 
 const adminRoutes = require("./routes/admin");
 const shopRoutes = require("./routes/shop");
+
+db.executeQuery("SELECT * FROM  products", [], (err, rows) => {
+  if (err) {
+    console.log("error", err);
+  } else {
+    console.log("success", rows.length);
+  }
+});
 
 // app.get("/favicon.ico", (req, res) => res.status(204));
 
