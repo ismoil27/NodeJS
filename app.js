@@ -13,13 +13,7 @@ app.set("views", "views");
 const adminRoutes = require("./routes/admin");
 const shopRoutes = require("./routes/shop");
 
-db.executeQuery("SELECT * FROM  products", [], (err, rows) => {
-  if (err) {
-    console.log("error", err);
-  } else {
-    console.log("success", rows.length);
-  }
-});
+// db.execute();
 
 // app.get("/favicon.ico", (req, res) => res.status(204));
 
@@ -32,3 +26,5 @@ app.use(shopRoutes);
 app.use(errorController.get404);
 
 app.listen(3000, console.log(`Server is running on Port 3000...`));
+
+// grant all privileges on node.* to root@'127.0.0.1' identified by '1111111!' with grant option
